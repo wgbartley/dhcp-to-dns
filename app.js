@@ -35,10 +35,16 @@ async.series([
 	get_pihole_dns,
 	compare_domains,
 	process_actions
-]);
+], function(error) {
+	console.error(error);
+});
 
 
 function process_actions(callback) {
+	if(actions.length==0) {
+		return callback('no actions to perform');
+	}
+
 	async.eachLimit(actions, 2, function(action, each_callback) {
 		if(action.action=='add')
 			pihole_add_dns(action, each_callback);
