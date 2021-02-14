@@ -19,7 +19,7 @@ I couldn't find a documented pi-hole API for creating local DNS records, so this
 Configuration
 -------------
 
-Edit `config.js` and set the options below.  Read any mention of "pi-hole" as "pi-hole web interface" and "pfsense" as "pfsense web interface".
+Copy `config.js.example` to `config.js` and set the options below.  Read any mention of "pi-hole" as "pi-hole web interface" and "pfsense" as "pfsense web interface".
  - `pihole_address` - The DNS or IP address of pi-hole
  - `pihole_protocol` - The protocol (HTTP or HTTPS) used to access pi-hole
  - `pihole_port` - The TCP port pi-hole is listening on
